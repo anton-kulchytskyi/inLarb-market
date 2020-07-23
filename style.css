@@ -1,0 +1,286 @@
+body {
+    background-color: #171D2D;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+.container {
+    width: 90%;
+}
+/*Navigation in header*/
+header {
+    text-transform: uppercase;
+    padding: 10px 0;
+}
+a {
+    color: #d1d1d1;
+}
+a:hover {
+    color: #D84380;
+}
+.dropdown-content {
+	padding-top: 20px;
+    background-color: #404040;
+    text-transform: initial;
+}
+.dropdown-content a {
+    color: #fff !important;
+}
+.dropdown-content a:hover {
+    color: #D84380 !important;
+}
+.dropdown-content .material-icons, .dropdown-content .material-icons-outlined {
+    padding-right: 10px;
+}
+/*Leftside navigation with icons*/
+.side-icons svg {
+    margin-top: 25px;
+    fill: #d1d1d1;
+    width: 50px;
+    height: 50px;
+    stroke: #171D2D;
+    stroke-width: 1.5;
+}
+.side-icons:hover, .side-icons svg:hover {
+    color: #D84380;
+    fill: #D84380;
+}
+@media screen and (max-width: 600px) {
+    /*Buttom navigation with icons for small (mobile) screen*/
+    .side-icons svg {
+        margin-top: 5px;        
+    }
+	.buttom-icons {
+		position: fixed;
+		display: flex;
+		justify-content: space-around;
+    	bottom: 0;
+    	z-index: 5;
+    	margin-bottom: 0;
+    	background-color: #171D2D;
+	}
+}
+/*Slide show with top events*/
+.mySlides {
+    display: none;
+    width: 100%;
+    position: relative;
+}
+.mySlides img {
+    border-radius: 20px;
+}
+.top-event {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;  
+}
+@media screen and (max-width: 400px) {
+    .top-event h4, .top-event p {
+        font-size: 0.8em;
+    }
+}
+/*Explore&Participate buttons*/
+.explorebtn {
+    background-color: #D84380 !important;
+    border-radius: 5px;
+    padding: 0 50px;
+    font-size: 0.7em;
+    cursor: pointer;
+}
+.explorebtn:hover {
+    background-color: #ff4081 !important;    
+}
+/*Searchbar*/
+.input-field>label {
+    width: 100%;
+}
+/*Latest Events*/
+.event {
+    border-radius: 15px;
+    box-shadow: 2px 2px 2px 0px #000;
+}
+.event-container {
+    position: relative;
+}
+.event-photo {
+    width: 100%;
+    height: auto;
+    border-radius: 15px 15px 0 0;
+}
+.calendar {
+    position: absolute;
+    bottom: 0;
+    height: 15%;
+    background: rgba(0, 0, 0, 0.9);
+}
+.event-calendar {
+    width: 100%;
+    height: 15%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5em;
+    align-items: center;
+    cursor: pointer;
+}
+.event-date, .event-time {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.event-calendar .material-icons-outlined {
+    color: #D84380;
+}
+.event-calendar p {
+    font-weight: 600;
+}
+.event-overlay {
+    position: absolute;
+    bottom: 15%;
+    left: 0;
+    right: 0;
+    background: rgba(225, 225, 225, 0.9);
+    border-radius: 15px 15px 0 0;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+    z-index: 2;
+}
+.event-overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.event-overlay-text p {
+    color: #000;
+    font-size: 1.5em;
+}
+.event-container:hover .event-overlay {
+    height: 85%;
+}
+.event-overlay-text img {
+    width: 5em;
+}
+hr {
+    border: 0;
+	border-top: 1px solid #292929;
+}
+.container h5 {
+    font-weight: 600;
+}
+.social {
+    text-transform: uppercase;
+    font-size: 12px;
+    padding-bottom: 5px;
+}
+.social .material-icons-outlined {
+    font-size: 15px;
+}
+.social a:hover {
+    color: #D84380;
+}
+.favorite .material-icons-outlined:hover {
+    color: #f00;
+}
+/*Upcoming events slider*/
+#prev,  #next {
+    cursor: pointer;
+}
+#slider {
+    width: 100%;
+    overflow: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+#slider::-webkit-scrollbar {
+    height: 0;
+}  
+#content {
+    display: grid;
+    grid-gap: 16px;
+    grid-auto-flow: column;
+    margin: auto;
+    box-sizing: border-box;
+}
+.item {
+    position: relative;
+    height: 180px;    
+}
+.item img {
+    width: 360px;
+    height: 180px;
+    border-radius: 10px;
+}
+.upcoming-event-date {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    background-color: #D84380;
+    width: 65px;
+    height: 65px;
+    padding-top: 5px;
+}
+.upcoming-event-date h5, .upcoming-event-date p{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.upcoming-event-text {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 0 10px 15px 10px;
+    border-radius: 0 0 10px 10px;
+}
+.upcoming-event-text a {
+    text-transform: uppercase;
+}
+/*.upcoming-event-text a:hover {
+    color: #d81b60;
+}*/
+/*Events Category*/
+.events-category {
+    background-color: #2E3241;
+    border-radius: 15px;
+    padding: 40px;
+}
+.events-category svg {
+    width: 60px;
+    height: 60px;
+    fill: #74717F;
+    stroke: #2E3241;
+    stroke-width: 1.5;
+}
+.events-category a {
+    color: #74717F;
+}
+/*Style for market.html*/
+.market-top-event img{
+    border-radius: 20px;
+}
+.market-top-event .card {
+    box-shadow: none;
+}
+.market-event-icon {
+    color: #D84380;
+}
+.money span {
+    font-size: 36px;
+    font-weight: 600;
+}
+.price {
+    display: block;
+    padding-bottom: 30px;
+    margin: 0 auto;
+}
